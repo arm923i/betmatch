@@ -339,9 +339,6 @@
         .main-right-img img{
         	max-width: 100%;
         }
-        .main-img-mobile{
-			display: none;
-        }
         .main-img-mobile img{
         	max-width: 100%;
         }
@@ -359,14 +356,11 @@
          	margin: auto; 
          	margin-top: 50px;
          }
-        @media(max-width: 768px){
-        	.main-banner{
-                background-image: url('./images/main_banner_mobile_background.png');
-        		background-position: top;
-        	}
-        	.arm-wrap .row{
-        		margin: 0px!important;
-        	}
+         .main-banner-logo img{
+         	width: 280px;
+			height: 67px;
+         }
+        @media(max-width: 1200px){
 			.main-banner .container-fluid.arm-wrap{
 				padding-bottom: 40px;
 	        	padding-top: 0px;
@@ -375,6 +369,21 @@
 			    margin-right: 0px;
 			    margin-left: 0px;
 	        }
+	           a.main-banner-button{
+	        	padding: 20px 60px;
+	        	margin-top: 30px;
+	        	font-size: 28px;
+	        }
+        }
+        @media(max-width: 768px){
+        	.main-banner{
+                background-image: url('./images/main_banner_mobile_background.png');
+        		background-position: top;
+        	}
+        	.arm-wrap .row{
+        		margin: 0px!important;
+        	}
+			
 	        .main-banner-logo{
                 padding-top: 30px;
 	            padding-bottom: 30px;
@@ -397,14 +406,7 @@
 	        	font-size: 33px;
 	        	    padding-bottom: 0px;
 	        }
-	        a.main-banner-button{
-	        	padding: 20px 60px;
-	        	margin-top: 30px;
-	        	font-size: 28px;
-	        }
-	        .main-img-mobile{
-				display: block;
-	        }
+	     
         }
 
         @media(max-width: 480px){
@@ -427,10 +429,10 @@
         
         <div class="arm-wrap container-fluid">
             <div class="row m-0">
-                <div class="col-12 col-md-6 main-baner-left d-flex">
+                <div class="col-12 col-xl-6 main-baner-left justify-content-center d-flex">
                     <div class="main-left-wrap d-flex flex-column align-items-center text-center">
 	                    <div class="main-banner-logo">
-	                        <img src="./images/logo.svg" style="width: 280px; height: 67px;" alt="">
+	                        <img src="./images/logo.svg"  alt="">
 	                    </div>
 
 	                    <div class="double-crypto-wrap">
@@ -442,7 +444,7 @@
               
 	                    <h2 class="get-double">ПОЛУЧИ Х2</h2>
 	                    <p class="get-double-sub">НА 3 ПЕРВЫХ ДЕПОЗИТА ПОСЛЕ РЕГИСТРАЦИИ</p>
-	                    <div class="main-img-mobile text-center">
+	                    <div class="d-block d-xl-none main-img-mobile text-center">
 	                    	<img src="./images/main_banner_mobile.png" alt="">
 	                    </div>
                    
@@ -450,7 +452,7 @@
 	                    
 	        		</div>
                 </div>
-                <div class="d-none d-sm-block col-12 col-md-6 main-baner-right text-center">
+                <div class="col-6 d-none d-xl-block main-baner-right text-center">
                     <div class="main-right-img">
                         <img src="./images/main_banner_right.png" alt="">
                     </div>
