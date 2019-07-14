@@ -19,7 +19,7 @@
             background: #160C28;
             overflow-x: hidden;
             color: #fff;
-            padding: 20px 0;
+/*            padding: 20px 0;*/
             font-family: Futura, serif;
         }
 
@@ -313,28 +313,23 @@
             max-width: 550px;
             padding-bottom: 115px;
         }
-        .main-banner-button{
+        a.main-banner-button{
             padding: 35px 90px;
             background: rgba(255, 217, 4, 0.973);
             box-shadow: 0px 0px 17px 0px rgba(255, 220, 11, 1);
             border-radius: 60px;
             transition: all .5s;
-            max-width: 440px;    
-        }
-        .main-banner-button a{
+            max-width: 440px;  
             color: #1d003d;
             /*font-family: "Futura Demi C";*/
             font-size: 41px;
             font-weight: 700;
-            text-transform: uppercase;
-
+            text-transform: uppercase;  
         }
-        .main-banner-button:hover {
+        a.main-banner-button:hover {
             background: #1d003d;
             box-shadow: 0px 0px 50px 0px rgba(255, 220, 11, 1);
-        }
-        .main-banner-button:hover a{
-            color: yellow;
+             color: yellow;
             text-decoration: none;
         }
         .main-right-img{
@@ -359,6 +354,11 @@
                 display: block;
                 margin-bottom: 15px;
             }
+         .foobtn{
+         	display: block; 
+         	margin: auto; 
+         	margin-top: 50px;
+         }
         @media(max-width: 768px){
         	.main-banner{
                 background-image: url('./images/main_banner_mobile_background.png');
@@ -397,27 +397,20 @@
 	        	font-size: 33px;
 	        	    padding-bottom: 0px;
 	        }
-	        .main-banner-button{
-            	padding: 20px 60px;
-            }
-	        .main-banner-button a{
+	        a.main-banner-button{
+	        	padding: 20px 60px;
+	        	margin-top: 30px;
 	        	font-size: 28px;
 	        }
 	        .main-img-mobile{
 				display: block;
 	        }
-            .main-banner-button{
-                margin-top: 30px;
-            }
         }
 
-        @media(max-width: 768px){
-            /*.mid-rect{
-                    display: none;
-            }*/
-            .mid-item-wrap img{
+        @media(max-width: 480px){
+/*            .mid-item-wrap img{
                 width: auto!important;
-            }
+            }*/
             .bottom-item{
                 margin-top: 30px;
               padding-bottom: 30px;
@@ -453,9 +446,8 @@
 	                    	<img src="./images/main_banner_mobile.png" alt="">
 	                    </div>
                    
-	                    <div class="main-banner-button">
-	                        <a href="https://betmatch.io/register" target="_blank" class="">Регистрация</a>
-	                    </div>
+	                    <a class="main-banner-button" href="https://betmatch.io/register" target="_blank">Регистрация</a>
+	                    
 	        		</div>
                 </div>
                 <div class="d-none d-sm-block col-12 col-md-6 main-baner-right text-center">
@@ -475,27 +467,27 @@
             <div class="row">
                 <div class="col-12 col-lg-6">
                     <div class="row mid-item-wrap">
-                        <div class="col col-md-4 mid-item wow slideInUp">
+                        <div class="col-6 col-md-4 mid-item wow slideInUp">
                             <img src="./images/mid1.png" style="width: 100%;" alt="">
                             <span>Мобильний <br> беттинг</span>
                         </div>
-                        <div class="col col-md-4 mid-item mid-item--shift wow fadeIn">
+                        <div class="col-6 col-md-4 mid-item mid-item--shift wow fadeIn">
                             <img src="./images/mid2.png" style="width: 100%;" alt="">
                             <span>Собственный <br> токен</span>
                         </div>
-                        <div class="col col-md-4 mid-item wow slideInUp">
+                        <div class="col-6 col-md-4 mid-item wow slideInUp">
                             <img src="./images/mid3.png" style="width: 100%;" alt="">
                             <span>Высокие <br> лимиты</span>
                         </div>
-                        <div class="col col-md-4 mid-item wow slideInUp">
+                        <div class="col-6 col-md-4 mid-item wow slideInUp">
                             <img src="./images/mid4.png" style="width: 100%;" alt="">
                             <span>Быстрые <br> выводы</span>
                         </div>
-                        <div class="col col-md-4 mid-item mid-item--shift wow fadeIn">
+                        <div class="col-6 col-md-4 mid-item mid-item--shift wow fadeIn">
                             <img src="./images/mid5.png" style="width: 100%;" alt="">
                             <span>Ставки <br> на блокчейне</span>
                         </div>
-                        <div class="col col-md-4 mid-item wow slideInUp">
+                        <div class="col-6 col-md-4 mid-item wow slideInUp">
                             <img src="./images/mid6.png" style="width: 100%;" alt="">
                             <span>Минимальные <br> комиссии</span>
                         </div>
@@ -597,9 +589,7 @@
                 <span class="yellow">Прозрачные</span> ставки
                 на блокчейне
             </div>
-                        <div class="main-banner-button" style="margin:auto; margin-top: 50px;">
-                            <a href="https://betmatch.io/register" target="_blank" class="">Регистрация</a>
-                        </div>
+            <a class="main-banner-button foobtn" href="https://betmatch.io/register" target="_blank" style="">Регистрация</a>
         </div>
     </footer>
 </body>
