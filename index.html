@@ -318,7 +318,8 @@
             background: rgba(255, 217, 4, 0.973);
             box-shadow: 0px 0px 17px 0px rgba(255, 220, 11, 1);
             border-radius: 60px;
-            transition: all .5s;    
+            transition: all .5s;
+            max-width: 440px;    
         }
         .main-banner-button a{
             color: #1d003d;
@@ -326,6 +327,7 @@
             font-size: 41px;
             font-weight: 700;
             text-transform: uppercase;
+
         }
         .main-banner-button:hover {
             background: #1d003d;
@@ -348,10 +350,19 @@
         .main-img-mobile img{
         	max-width: 100%;
         }
-
+        .mid-item {
+            text-align: center;
+        }
+        .mid-item span{
+                font-size: 22px;
+                margin-top: -80px;
+                display: block;
+                margin-bottom: 15px;
+            }
         @media(max-width: 768px){
         	.main-banner{
-        		background-position: top center;
+                background-image: url('./images/main_banner_mobile_background.png');
+        		background-position: top;
         	}
         	.arm-wrap .row{
         		margin: 0px!important;
@@ -365,12 +376,16 @@
 			    margin-left: 0px;
 	        }
 	        .main-banner-logo{
-	            padding-bottom: 40px;
+                padding-top: 30px;
+	            padding-bottom: 30px;
 	        }
 	        .main-banner-logo img{
 	        	width: 195px;
 				height: 47px;
 	        }
+            .double-crypto-wrap {
+                padding: 5px 40px;
+            }
 	        .double-crypto-text{
 	        	font-size: 18px;
 	        }	
@@ -380,10 +395,10 @@
 	        }
 	        .get-double-sub{
 	        	font-size: 33px;
-	        	    padding-bottom: 20px;
+	        	    padding-bottom: 0px;
 	        }
 	        .main-banner-button{
-            	padding: 25px 60px;
+            	padding: 20px 60px;
             }
 	        .main-banner-button a{
 	        	font-size: 28px;
@@ -391,19 +406,36 @@
 	        .main-img-mobile{
 				display: block;
 	        }
+            .main-banner-button{
+                margin-top: 30px;
+            }
+        }
+
+        @media(max-width: 768px){
+            /*.mid-rect{
+                    display: none;
+            }*/
+            .mid-item-wrap img{
+                width: auto!important;
+            }
+            .bottom-item{
+                margin-top: 30px;
+              padding-bottom: 30px;
+                 border-bottom: 1px solid #ebebeb70;
+            }
+            .bottom-item:last-child{
+                border-bottom: none;
+            }
+
         }
     </style>
 
     <div class="main-banner">
         
         <div class="arm-wrap container-fluid">
-            
             <div class="row m-0">
-
                 <div class="col-12 col-md-6 main-baner-left d-flex">
-
                     <div class="main-left-wrap d-flex flex-column align-items-center text-center">
-
 	                    <div class="main-banner-logo">
 	                        <img src="./images/logo.svg" style="width: 280px; height: 67px;" alt="">
 	                    </div>
@@ -413,72 +445,63 @@
 	                        <div class="double-crypto-text">
 	                            <p>Удвой свою крипту</p>
 	                        </div>
-
 	                    </div>
-	                        
+              
 	                    <h2 class="get-double">ПОЛУЧИ Х2</h2>
-
 	                    <p class="get-double-sub">НА 3 ПЕРВЫХ ДЕПОЗИТА ПОСЛЕ РЕГИСТРАЦИИ</p>
-
 	                    <div class="main-img-mobile text-center">
 	                    	<img src="./images/main_banner_mobile.png" alt="">
 	                    </div>
-	                    
+                   
 	                    <div class="main-banner-button">
 	                        <a href="https://betmatch.io/register" target="_blank" class="">Регистрация</a>
 	                    </div>
-
 	        		</div>
-
                 </div>
-
                 <div class="d-none d-sm-block col-12 col-md-6 main-baner-right text-center">
-
                     <div class="main-right-img">
                         <img src="./images/main_banner_right.png" alt="">
                     </div>
-                    
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
     <!-- arm923i end -->
 
     <div class="container">
-        <header>
-            <img src="./images/logo.svg" style="width: 210px; height: 50px;" alt="">
-        </header>
 
         <section class="mid">
             <div class="mid-rect"></div>
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-12 col-lg-6">
                     <div class="row mid-item-wrap">
-                        <div class="col-md-4 mid-item wow slideInUp">
+                        <div class="col col-md-4 mid-item wow slideInUp">
                             <img src="./images/mid1.png" style="width: 100%;" alt="">
+                            <span>Мобильний <br> беттинг</span>
                         </div>
-                        <div class="col-md-4 mid-item mid-item--shift wow fadeIn">
+                        <div class="col col-md-4 mid-item mid-item--shift wow fadeIn">
                             <img src="./images/mid2.png" style="width: 100%;" alt="">
+                            <span>Собственный <br> токен</span>
                         </div>
-                        <div class="col-md-4 mid-item wow slideInUp">
+                        <div class="col col-md-4 mid-item wow slideInUp">
                             <img src="./images/mid3.png" style="width: 100%;" alt="">
+                            <span>Высокие <br> лимиты</span>
                         </div>
-                        <div class="col-md-4 mid-item wow slideInUp">
+                        <div class="col col-md-4 mid-item wow slideInUp">
                             <img src="./images/mid4.png" style="width: 100%;" alt="">
+                            <span>Быстрые <br> выводы</span>
                         </div>
-                        <div class="col-md-4 mid-item mid-item--shift wow fadeIn">
+                        <div class="col col-md-4 mid-item mid-item--shift wow fadeIn">
                             <img src="./images/mid5.png" style="width: 100%;" alt="">
+                            <span>Ставки <br> на блокчейне</span>
                         </div>
-                        <div class="col-md-4 mid-item wow slideInUp">
+                        <div class="col col-md-4 mid-item wow slideInUp">
                             <img src="./images/mid6.png" style="width: 100%;" alt="">
+                            <span>Минимальные <br> комиссии</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 m-vert">
+                <div class="col-12 col-lg-6 m-vert">
                     <div class="mid-title ">
                         <span class="yellow fz-36">Наши преимущества</span>
                     </div>
@@ -529,6 +552,7 @@
                         криптовалюты в верхней части своего кошелька и на своей панели в системе ставок.
                     </div>
                 </div>
+                <hr>
                 <div class="bottom-item col-lg-4 col-md-6">
                     <div class="bottom-item__image wow slideInUp">
                         <img src="./images/bottom2.svg" style="width: 90px; height: 90px;" alt="">
@@ -545,6 +569,7 @@
                         игрока или команду.
                     </div>
                 </div>
+                <hr>
                 <div class="bottom-item col-lg-4 col-md-6">
                     <div class="bottom-item__image wow slideInUp">
                         <img src="./images/bottom3.svg" style="width: 90px; height: 90px;" alt="">
@@ -572,13 +597,9 @@
                 <span class="yellow">Прозрачные</span> ставки
                 на блокчейне
             </div>
-            <div class="footer-btn">
-
-                <a href="https://betmatch.io/register" target="_blank" class="button button--sm">
-                    <span class="button__line">Регистрация</span>
-                </a>
-
-            </div>
+                        <div class="main-banner-button" style="margin:auto; margin-top: 50px;">
+                            <a href="https://betmatch.io/register" target="_blank" class="">Регистрация</a>
+                        </div>
         </div>
     </footer>
 </body>
