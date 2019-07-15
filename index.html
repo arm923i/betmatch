@@ -263,17 +263,14 @@
 
     <!-- arm923i start -->
     
-    <style>
-        
+    <style>       
         .main-banner{
-            background-image: url('./images/main_banner_background.png');
+            background: #000 url('./images/main_banner_background.png') no-repeat center;
             background-size: cover; 
-            background-repeat: no-repeat; 
-            background-position: center center;
+			overflow: hidden;
 			height: 100vh;
 			display: flex;
 			flex-direction: column;
-			align-items: center;
 			justify-content: center;
         }
 		.arm-wrap{
@@ -294,19 +291,16 @@
             text-transform: uppercase;
             transform: skewX(50deg);
         }
-        .double-crypto-text p{
-            margin: 0px;
-        }
         .get-double{
             color: #ffdc0b;
             font-size: 88px;
             font-weight: 400;
-            padding: 30px 0px 0px;
         }
         .get-double-sub{
             color: #ffffff;
             font-size: 48px;
             font-weight: 400;
+                max-width: 525px;
         }
         a.main-banner-button{
             padding: 35px 90px;
@@ -329,13 +323,10 @@
     	    padding-top: 5vh;
         }
 		.main-right-img img {
-			    width: auto;
-			    max-height: 85vh;
-			    max-width: 100%;
+		    object-fit: contain;
+		    height: 85vh;
+		    width: 100%;
 		}
-        .main-img-mobile img{
-        	max-width: 100%;
-        }
         .mid-item {
             text-align: center;
         }
@@ -349,19 +340,15 @@
 			display: block; 
 			margin: auto; 
 			margin-top: 50px;
-			    width: fit-content;
+			width: fit-content;
 		}
 		.main-banner-logo img{
 			width: 280px;
-		height: 67px;
+			height: 67px;
 		}
 
 		@media (max-width: 1400px){
-            .main-banner-logo {
-			    padding-bottom: 70px;
-			}
 			.get-double-sub{
-				padding-bottom: 50px;
 				font-size: 40px;
 			}
 			.get-double{
@@ -371,27 +358,33 @@
 				padding: 20px 85px;
 			}
         }
-
        @media(max-width: 1200px){
-	           a.main-banner-button{
+       		.double-crypto-text{
+       			font-size: 20px;
+       		}
+       		.get-double{
+				font-size: 61px;
+			}
+	        a.main-banner-button{
 	        	padding: 20px 60px;
-	        	margin-top: 30px;
 	        	font-size: 28px;
 	        }
         }
-
-        @media(max-width: 768px){
+        @media(max-width: 767px){
+        	.main-overlay{
+        		position: absolute;
+			    width: 100%;
+			    background: rgba(0, 0, 0, 0.62);
+			    height: 100%;
+			    z-index: 10;
+        	}
+        	.main-baner-left{
+    		    z-index: 999;
+        	}
         	.main-banner{
                 background-image: url('./images/main_banner_mobile_background.png');
         		background-position: top;
-        	}
-        	.arm-wrap .row{
-        		margin: 0px!important;
-        	}			
-	        .main-banner-logo{
-                padding-top: 30px;
-	            padding-bottom: 30px;
-	        }
+        	}		
 	        .main-banner-logo img{
 	        	width: 195px;
 				height: 47px;
@@ -401,14 +394,15 @@
             }
 	        .double-crypto-text{
 	        	font-size: 18px;
-	        }	
-	        .get-double{
-	        	font-size: 61px;
-	        	padding: 20px 0px 0px;
 	        }
 	        .get-double-sub{
-	        	font-size: 33px;
-	        	    padding-bottom: 0px;
+	            max-width: 460px;
+	        }	
+	        .main-baner-right{
+	        	position: absolute;
+    			z-index: 0;
+    			top: 0; 
+    			left:0;
 	        }
 	        .bottom-item{
                 margin-top: 30px;
@@ -420,66 +414,42 @@
             }
         }
         @media(max-width: 480px){
-        	.arm-wrap {
-				    height: 95vh;
-				}
-				.arm-wrap .row {
-			    height: 95vh;
-			}
-			.main-banner-logo{
-				padding: 0 0 20px;
-			}
-			.get-double {
-			    font-size: 44px;
-			    padding: 10px 0 0;
-			    margin: 0;
-			}
 			.get-double-sub{
-				font-size: 28px;
-				    margin: 0;
-			}
-			.main-img-mobile img {
-			    height: 40vh;
+				font-size: 33px;
 			}
 			a.main-banner-button {
 			    padding: 10px 50px;
-			    margin-top: 20px;
 			    font-size: 24px;
 			}
-       }
-         
-        
+			.footer-text {
+			    width: 100%;
+			    font-size: 40px;
+			}
+       }     
     </style>
 
-    <div class="main-banner">  
+    <div class="main-banner"> 
+    	<div class="main-overlay"></div> 
         <div class="arm-wrap container-fluid">
             <div class="row m-0">
-                <div class="col-12 col-md-6 main-baner-left justify-content-center d-flex">
-                    <div class="main-left-wrap d-flex flex-column align-items-center justify-content-around text-center">
-	                    
+                <div class="col-12 col-md-6 main-baner-left d-flex justify-content-center p-0">
+                    <div class="main-left-wrap d-flex flex-column align-items-center justify-content-between">
 	                    <div class="main-banner-logo">
 	                        <img src="./images/logo.svg"  alt="">
 	                    </div>
-
-	                    <div class="main-center d-flex flex-column align-items-center">
-	                    	<div class="double-crypto-wrap"> 
+	                    <div class="main-center d-flex flex-column align-items-center text-center mt-5 mt-md-0 mb-auto mb-md-0">
+	                    	<div class="double-crypto-wrap mb-3 "> 
 		                        <div class="double-crypto-text">
-		                            <p>Удвой свою крипту</p>
+		                            <span>Удвой свою крипту</span>
 		                        </div>
 		                    </div>
-		                    <h2 class="get-double">ПОЛУЧИ Х2</h2>
+		                    <h1 class="get-double">ПОЛУЧИ Х2</h1>
 		                    <p class="get-double-sub">НА 3 ПЕРВЫХ ДЕПОЗИТА ПОСЛЕ РЕГИСТРАЦИИ</p>
 	                    </div>
-		                    
-	                    <div class="d-block d-md-none main-img-mobile text-center">
-	                    	<img src="./images/main_banner_mobile.png" alt="">
-	                    </div>
-
 	                    <a class="main-banner-button" href="https://betmatch.io/register" target="_blank">Регистрация</a>
-
 	                </div>
                 </div>
-                <div class="col-6 d-none d-md-block main-baner-right text-center">
+                <div class="col-12 col-md-6 main-baner-right text-center">
                     <div class="main-right-img">
                         <img src="./images/main_banner_right.png" alt="">
                     </div>
